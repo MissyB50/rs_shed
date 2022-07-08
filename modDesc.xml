@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+    <author>MISSYB</author>
+    <version>1.0.0.0</version>
+    <title>
+        <en>Shed Pack</en>
+        <de>Hallen Pack</de>
+    </title>
+    <description>
+<en><![CDATA[This pack contains 6 shed the following are,
+Bale Shed Price: £5000
+Shed Price: £25000
+Shed Long Price: £35000
+Vehicle Shed Price: £15000
+Corner Shed Price: £45000
+Daily upkeep £1
+]]></en>
+
+<de><![CDATA[Dieses Pack enthält 6 Hallen,
+Ballen Unterstand Preis: € 5000
+Fahrzeughalle Preis: € 25000
+Lange Fahrzeughalle Preis: € 35000
+Fahrzeug Unterstand Preis: € 15000
+Eckschuppen Preis: € 45000
+Unterhalt: 1 €/Tag
+]]></de>
+    </description>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true" />
+    <storeItems>
+        <storeItem xmlFilename="baleShed.xml" />
+        <storeItem xmlFilename="mainShed.xml" />
+        <storeItem xmlFilename="mainShed1.xml" />
+        <storeItem xmlFilename="vehicleShed.xml" />
+        <storeItem xmlFilename="shedCorner.xml" />
+    </storeItems>
+    <l10n>
+        <text name="function_baleShed">
+            <en>Place to store bales</en>
+            <de>Platz zum Lagern von Ballen</de>
+        </text>
+        <text name="shopItem_Bale Shed">
+            <en>Place to store bales</en>
+            <de>Platz zum Lagern von Ballen</de>
+        </text>
+        <text name="function_shed">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge unterstellen können</de>
+        </text>
+        <text name="shopItem_Main Shed">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge aufbewahren können</de>
+        </text>
+        <text name="function_shedl">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge aufbewahren können</de>
+        </text>
+        <text name="shopItem_Shed Long">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge aufbewahren können</de>
+        </text>
+        <text name="function_shedvc">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge aufbewahren können</de>
+        </text>
+        <text name="shopItem_Vehicle Shed">
+            <en>A place to store your vehicles</en>
+            <de>Ein Ort, an dem Sie Ihre Fahrzeuge aufbewahren können</de>
+        </text>
+       <text name="function_bunkerSilo">
+            <en>Use for fermenting</en>
+            <de>Verwendung zur Gärung</de>
+        </text>
+        <text name="shopItem_bunkerSilo">
+            <en>Use for fermenting</en>
+            <de>Verwendung zur Gärung</de>
+        </text>
+        <text name="Close Door">
+            <en>Close Doors</en>
+            <de>Türen schließen</de>
+        </text>
+        <text name="Open Door">
+            <en>Open Door</en>
+            <de>Tor öffnen</de>
+        </text>
+        <text name="action_lightsOff">
+            <en>Turn Lights Off</en>
+            <de>Licht ausschalten</de>
+        </text>
+        <text name="action_lightsOn">
+            <en>Turn Lights On</en>
+            <de>Licht einschalten</de>
+        </text>
+    </l10n>
+</modDesc>

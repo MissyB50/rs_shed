@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="vehicleShed01" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="9.0.2"/>
+  </Asset>
+
+  <Files>
+    <File fileId="7" filename="$data/shaders/glowShader.xml"/>
+    <File fileId="3" filename="$data/shared/default_normal.dds"/>
+    <File fileId="4" filename="$data/shared/default_specular.dds"/>
+    <File fileId="8" filename="textures/lightEmissive.dds"/>
+    <File fileId="2" filename="textures/lightSwitch.png"/>
+    <File fileId="5" filename="textures/neonLight_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="lightOn2_mat" materialId="5" customShaderId="7" customShaderVariation="customEmissiveMap">
+      <Texture fileId="5"/>
+      <Normalmap fileId="3"/>
+      <Custommap name="mEmissiveMap" fileId="8"/>
+      <CustomParameter name="lightControl" value="10 0 0 0"/>
+    </Material>
+    <Material name="lightSwitchBox_mat" materialId="6">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="neonLight_mat" materialId="8" specularColor="0.694118 1 0.694118">
+      <Texture fileId="5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="lights.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+      <TransformGroup name="lights" nodeId="15">
+        <Shape shapeId="1" name="trigger" translation="-1.08 1.27708 6.54986" visibility="false" kinematic="true" trigger="true" collisionMask="1048576" nodeId="16" materialIds="4" nonRenderable="true"/>
+        <Shape shapeId="2" name="switchHousing" translation="-1.08 1.5 5.99492" scale="2 2 2" clipDistance="77" nodeId="17" materialIds="6" receiveShadows="true">
+          <Shape shapeId="3" name="lightSwitchButton" translation="0 0 0.003" rotation="-6 0 0" clipDistance="100" nodeId="18" materialIds="6" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <Shape shapeId="4" name="neonLight" translation="-6.972 4.93403 4.35848e-07" rotation="5.06123e-06 0 -8.44755e-06" clipDistance="120" nodeId="20" materialIds="8" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="light" nodeId="21">
+            <Shape shapeId="5" name="emissive" translation="0 -3.32622e-06 0" clipDistance="120" nodeId="22" materialIds="5" castsShadows="true" receiveShadows="true"/>
+            <Light name="pointLight" translation="0 -0.143 0" clipDistance="120" nodeId="23" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" range="10"/>
+          </TransformGroup>
+        </Shape>
+        <Shape shapeId="4" name="neonLight" translation="4.882 4.93403 4.35848e-07" rotation="5.06123e-06 0 -8.44755e-06" clipDistance="120" nodeId="24" materialIds="8" castsShadows="true" receiveShadows="true">
+          <TransformGroup name="light" nodeId="25">
+            <Shape shapeId="5" name="emissive" clipDistance="120" nodeId="26" materialIds="5" castsShadows="true" receiveShadows="true"/>
+            <Light name="pointLight" translation="0 -0.143368 0" clipDistance="120" nodeId="27" type="point" color="1 0.95 0.9" emitDiffuse="true" emitSpecular="true" range="10"/>
+          </TransformGroup>
+        </Shape>
+      </TransformGroup>
+  </Scene>
+
+</i3D>
